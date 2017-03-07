@@ -1,0 +1,201 @@
+\hypertarget{improc_8h}{}\section{improc.\+h File Reference}
+\label{improc_8h}\index{improc.\+h@{improc.\+h}}
+
+
+\+: Functions able to make modification on images. The images are send in a vector of unsigned whole number representing the color of each pixels  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{improc_8h_a20f6eb58be5ea103ae62ac723d67a4b4}{invert} (vector$<$ uint8\+\_\+t $>$ \&img\+\_\+bw, const uint32\+\_\+t w, const uint32\+\_\+t h)
+\begin{DoxyCompactList}\small\item\em Invert the color of a image. \end{DoxyCompactList}\item 
+void \hyperlink{improc_8h_aa8e03aa13cc1f2e137c218d29729a00d}{binary} (vector$<$ uint8\+\_\+t $>$ \&img\+\_\+bw, const uint32\+\_\+t w, const uint32\+\_\+t h, const uint8\+\_\+t mid\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Convert the ligth color in white and dark color in black. \end{DoxyCompactList}\item 
+void \hyperlink{improc_8h_a43675deed2cc894d881075fc6256e2a3}{draw\+\_\+diag} (vector$<$ uint8\+\_\+t $>$ \&img\+\_\+lines, const uint32\+\_\+t w, const uint32\+\_\+t h, const uint32\+\_\+t w\+\_\+center, const uint32\+\_\+t h\+\_\+center, const int direction, const uint8\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw a diagonal on a image. \end{DoxyCompactList}\item 
+void \hyperlink{improc_8h_ad08ea34da8161fe60648dd1f881fdd6e}{draw\+\_\+hline} (vector$<$ uint8\+\_\+t $>$ \&img\+\_\+lines, const uint32\+\_\+t w, const uint32\+\_\+t h, const uint32\+\_\+t pos\+\_\+vertical, const uint32\+\_\+t thickness, const uint8\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em draw a horizontal line on a image \end{DoxyCompactList}\item 
+void \hyperlink{improc_8h_af0b0e7411a037aa17da852479789e8c1}{draw\+\_\+vline} (vector$<$ uint8\+\_\+t $>$ \&img\+\_\+lines, const uint32\+\_\+t w, const uint32\+\_\+t h, const uint32\+\_\+t pos\+\_\+horizontal, const uint32\+\_\+t thickness, const uint8\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em draw a vertical line on a image \end{DoxyCompactList}\item 
+void \hyperlink{improc_8h_a2c99823c57ac7f931086439e7d576928}{checker} (vector$<$ uint8\+\_\+t $>$ \&img\+\_\+checker, const uint32\+\_\+t w, const uint32\+\_\+t h, const uint32\+\_\+t size\+\_\+square)
+\begin{DoxyCompactList}\small\item\em draw a checker on a image \end{DoxyCompactList}\item 
+void \hyperlink{improc_8h_a37c537b5ebd4f318c181c5bbeecf1547}{life\+\_\+game} (vector$<$ uint8\+\_\+t $>$ \&img\+\_\+life, const uint32\+\_\+t w\+\_\+life, const uint32\+\_\+t h\+\_\+life, const uint32\+\_\+t nb\+\_\+iteration)
+\begin{DoxyCompactList}\small\item\em draw the result of a number of iteration of the game of life \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\+: Functions able to make modification on images. The images are send in a vector of unsigned whole number representing the color of each pixels 
+
+
+
+ Projet \+: Labo2
+
+\begin{DoxyAuthor}{Author}
+\+: James Smith 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 01.\+03.\+2017
+\end{DoxyDate}
+Remarque(s) \+: $<$ à=\char`\"{}\char`\"{} compléter$>$=\char`\"{}\char`\"{}$>$
+
+\subsubsection*{Compilateur \+: Min\+G\+W-\/g++ 5.\+3.\+0 }
+
+\subsection{Function Documentation}
+\hypertarget{improc_8h_aa8e03aa13cc1f2e137c218d29729a00d}{}\label{improc_8h_aa8e03aa13cc1f2e137c218d29729a00d} 
+\index{improc.\+h@{improc.\+h}!binary@{binary}}
+\index{binary@{binary}!improc.\+h@{improc.\+h}}
+\subsubsection{\texorpdfstring{binary()}{binary()}}
+{\footnotesize\ttfamily void binary (\begin{DoxyParamCaption}\item[{vector$<$ uint8\+\_\+t $>$ \&}]{img\+\_\+bw,  }\item[{const uint32\+\_\+t}]{w,  }\item[{const uint32\+\_\+t}]{h,  }\item[{const uint8\+\_\+t}]{mid\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Convert the ligth color in white and dark color in black. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+bw} & image to convert in black and white \\
+\hline
+{\em w} & width of the image \\
+\hline
+{\em h} & higth of the image \\
+\hline
+{\em mid\+\_\+value} & the value limit to change in white or in black \\
+\hline
+\end{DoxyParams}
+\hypertarget{improc_8h_a2c99823c57ac7f931086439e7d576928}{}\label{improc_8h_a2c99823c57ac7f931086439e7d576928} 
+\index{improc.\+h@{improc.\+h}!checker@{checker}}
+\index{checker@{checker}!improc.\+h@{improc.\+h}}
+\subsubsection{\texorpdfstring{checker()}{checker()}}
+{\footnotesize\ttfamily void checker (\begin{DoxyParamCaption}\item[{vector$<$ uint8\+\_\+t $>$ \&}]{img\+\_\+checker,  }\item[{const uint32\+\_\+t}]{w,  }\item[{const uint32\+\_\+t}]{h,  }\item[{const uint32\+\_\+t}]{size\+\_\+square }\end{DoxyParamCaption})}
+
+
+
+draw a checker on a image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+lines} & image to draw on \\
+\hline
+{\em w} & width of the image \\
+\hline
+{\em h} & hight of the image \\
+\hline
+{\em size\+\_\+square} & is the size of the squares \\
+\hline
+\end{DoxyParams}
+\hypertarget{improc_8h_a43675deed2cc894d881075fc6256e2a3}{}\label{improc_8h_a43675deed2cc894d881075fc6256e2a3} 
+\index{improc.\+h@{improc.\+h}!draw\+\_\+diag@{draw\+\_\+diag}}
+\index{draw\+\_\+diag@{draw\+\_\+diag}!improc.\+h@{improc.\+h}}
+\subsubsection{\texorpdfstring{draw\+\_\+diag()}{draw\_diag()}}
+{\footnotesize\ttfamily void draw\+\_\+diag (\begin{DoxyParamCaption}\item[{vector$<$ uint8\+\_\+t $>$ \&}]{img\+\_\+lines,  }\item[{const uint32\+\_\+t}]{w,  }\item[{const uint32\+\_\+t}]{h,  }\item[{const uint32\+\_\+t}]{w\+\_\+center,  }\item[{const uint32\+\_\+t}]{h\+\_\+center,  }\item[{const int}]{direction,  }\item[{const uint8\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draw a diagonal on a image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+lines} & imgage to draw on. \\
+\hline
+{\em w} & width of the image \\
+\hline
+{\em h} & higth of the image \\
+\hline
+{\em w\+\_\+center} & middle of the width \\
+\hline
+{\em h\+\_\+center} & middle of the hight \\
+\hline
+{\em direction} & is the slope of the diagonal \\
+\hline
+\end{DoxyParams}
+\hypertarget{improc_8h_ad08ea34da8161fe60648dd1f881fdd6e}{}\label{improc_8h_ad08ea34da8161fe60648dd1f881fdd6e} 
+\index{improc.\+h@{improc.\+h}!draw\+\_\+hline@{draw\+\_\+hline}}
+\index{draw\+\_\+hline@{draw\+\_\+hline}!improc.\+h@{improc.\+h}}
+\subsubsection{\texorpdfstring{draw\+\_\+hline()}{draw\_hline()}}
+{\footnotesize\ttfamily void draw\+\_\+hline (\begin{DoxyParamCaption}\item[{vector$<$ uint8\+\_\+t $>$ \&}]{img\+\_\+lines,  }\item[{const uint32\+\_\+t}]{w,  }\item[{const uint32\+\_\+t}]{h,  }\item[{const uint32\+\_\+t}]{pos\+\_\+vertical,  }\item[{const uint32\+\_\+t}]{thickness,  }\item[{const uint8\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+draw a horizontal line on a image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+lines} & image to draw on. \\
+\hline
+{\em w} & width of the image \\
+\hline
+{\em h} & higth of the image \\
+\hline
+{\em pos\+\_\+vertical} & is the position horizontal where start the line. \\
+\hline
+{\em color} & of the diagonal \\
+\hline
+\end{DoxyParams}
+\hypertarget{improc_8h_af0b0e7411a037aa17da852479789e8c1}{}\label{improc_8h_af0b0e7411a037aa17da852479789e8c1} 
+\index{improc.\+h@{improc.\+h}!draw\+\_\+vline@{draw\+\_\+vline}}
+\index{draw\+\_\+vline@{draw\+\_\+vline}!improc.\+h@{improc.\+h}}
+\subsubsection{\texorpdfstring{draw\+\_\+vline()}{draw\_vline()}}
+{\footnotesize\ttfamily void draw\+\_\+vline (\begin{DoxyParamCaption}\item[{vector$<$ uint8\+\_\+t $>$ \&}]{img\+\_\+lines,  }\item[{const uint32\+\_\+t}]{w,  }\item[{const uint32\+\_\+t}]{h,  }\item[{const uint32\+\_\+t}]{pos\+\_\+horizontal,  }\item[{const uint32\+\_\+t}]{thickness,  }\item[{const uint8\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+draw a vertical line on a image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+lines} & image to draw on. \\
+\hline
+{\em w} & width of the image \\
+\hline
+{\em h} & higth of the image \\
+\hline
+{\em pos\+\_\+horizontal} & is the position vertical where start the line \\
+\hline
+{\em thickness} & of the line \\
+\hline
+{\em color} & of the line \\
+\hline
+\end{DoxyParams}
+\hypertarget{improc_8h_a20f6eb58be5ea103ae62ac723d67a4b4}{}\label{improc_8h_a20f6eb58be5ea103ae62ac723d67a4b4} 
+\index{improc.\+h@{improc.\+h}!invert@{invert}}
+\index{invert@{invert}!improc.\+h@{improc.\+h}}
+\subsubsection{\texorpdfstring{invert()}{invert()}}
+{\footnotesize\ttfamily void invert (\begin{DoxyParamCaption}\item[{vector$<$ uint8\+\_\+t $>$ \&}]{img\+\_\+bw,  }\item[{const uint32\+\_\+t}]{w,  }\item[{const uint32\+\_\+t}]{h }\end{DoxyParamCaption})}
+
+
+
+Invert the color of a image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+bw} & a vector with all the pixels\textquotesingle{}s color in 8 bits \\
+\hline
+{\em w} & width of the image \\
+\hline
+{\em h} & higth of the image \\
+\hline
+\end{DoxyParams}
+\hypertarget{improc_8h_a37c537b5ebd4f318c181c5bbeecf1547}{}\label{improc_8h_a37c537b5ebd4f318c181c5bbeecf1547} 
+\index{improc.\+h@{improc.\+h}!life\+\_\+game@{life\+\_\+game}}
+\index{life\+\_\+game@{life\+\_\+game}!improc.\+h@{improc.\+h}}
+\subsubsection{\texorpdfstring{life\+\_\+game()}{life\_game()}}
+{\footnotesize\ttfamily void life\+\_\+game (\begin{DoxyParamCaption}\item[{vector$<$ uint8\+\_\+t $>$ \&}]{img\+\_\+life,  }\item[{const uint32\+\_\+t}]{w\+\_\+life,  }\item[{const uint32\+\_\+t}]{h\+\_\+life,  }\item[{const uint32\+\_\+t}]{nb\+\_\+iteration }\end{DoxyParamCaption})}
+
+
+
+draw the result of a number of iteration of the game of life 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+life} & image to draw on \\
+\hline
+{\em w\+\_\+life} & is the width of the image \\
+\hline
+{\em h\+\_\+life} & is the higth of the image \\
+\hline
+{\em nb\+\_\+iteration} & is the number of iteration to play to the game of life \\
+\hline
+\end{DoxyParams}

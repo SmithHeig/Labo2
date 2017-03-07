@@ -1,0 +1,41 @@
+\begin{theindex}
+
+  \item {binary}
+    \subitem {improc.\+h}, \hyperpage{8}
+  \item {bmp\+\_\+color\+\_\+index\+\_\+t}, \hyperpage{5}
+  \item {bmp\+\_\+file\+\_\+header\+\_\+t}, \hyperpage{5}
+  \item {bmp\+\_\+info\+\_\+header\+\_\+t}, \hyperpage{6}
+
+  \indexspace
+
+  \item {checker}
+    \subitem {improc.\+h}, \hyperpage{8}
+
+  \indexspace
+
+  \item {draw\+\_\+diag}
+    \subitem {improc.\+h}, \hyperpage{9}
+  \item {draw\+\_\+hline}
+    \subitem {improc.\+h}, \hyperpage{9}
+  \item {draw\+\_\+vline}
+    \subitem {improc.\+h}, \hyperpage{10}
+
+  \indexspace
+
+  \item {improc.\+h}, \hyperpage{7}
+    \subitem {binary}, \hyperpage{8}
+    \subitem {checker}, \hyperpage{8}
+    \subitem {draw\+\_\+diag}, \hyperpage{9}
+    \subitem {draw\+\_\+hline}, \hyperpage{9}
+    \subitem {draw\+\_\+vline}, \hyperpage{10}
+    \subitem {invert}, \hyperpage{10}
+    \subitem {life\+\_\+game}, \hyperpage{10}
+  \item {invert}
+    \subitem {improc.\+h}, \hyperpage{10}
+
+  \indexspace
+
+  \item {life\+\_\+game}
+    \subitem {improc.\+h}, \hyperpage{10}
+
+\end{theindex}
