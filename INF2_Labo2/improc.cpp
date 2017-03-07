@@ -37,31 +37,42 @@ void binary(vector<uint8_t>& img_bw, const uint32_t w, const uint32_t h, const u
 }
 
 void draw_diag(vector<uint8_t>& img_lines, const uint32_t w, const uint32_t h, const uint32_t w_center, const uint32_t h_center, const int direction, const uint8_t color){
-   if(w_center == (w/2) && h_center == (h/2)){
-      // Test if the direction is a correct value
-      if(direction == 1 || direction == -1){
-         uint32_t size_diago;
-         // Test if the image in landscape or profil mode
-         if(w > h){
-            size_diago = h_center;
-         } 
-         else{
-            size_diago = w_center;
+   if((direction == 1 || direction == -1) && w > w_center && h > h_center){
+      int size_diago;
+      if(w > h){
+         if (w - w_center > w_center){
+            size_diago = int(w - w_center);
+         } else{
+            size_diago = int(w_center);
          }
-         unsigned center = h_center * (w) + w_center;
-         unsigned pos_diag_sup;
-         unsigned pos_diag_inf;
-         for(uint32_t i = 0; i < size_diago; ++i){
-            if(direction == -1) {
+      } else {
+         if(h - h_center > h_center){
+            size_diago = int(h - h_center);
+         } else {
+            size_diago = int(h_center);
+         }
+      }
+      unsigned center = h_center * (w) + w_center;
+      unsigned pos_diag_sup = 0;
+      unsigned pos_diag_inf = 0;
+      for(long i = 0; i < size_diago; ++i){
+         if(direction == -1) {
+            if(long(h_center) - i > 0 && long(w_center) - i > 0){
                pos_diag_sup = center - (w * i) - i; // Diag sup
-               pos_diag_inf = center + (w * i) + i; // Diag inf
-            } else {
-               pos_diag_sup = center - (w* i) + i; // diag sup
-               pos_diag_inf = center + (w* i) - i; // diag inf
             }
-            img_lines.at(pos_diag_sup) = color;
-            img_lines.at(pos_diag_inf) = color;
+            if(long(h_center) + i < long(h) && long(w_center) + i < long(w)){
+               pos_diag_inf = center + (w * i) + i; // Diag inf
+            }
+         } else {
+            if(long(h_center) - i > 0 && long(w_center) + i < long(w)){
+               pos_diag_sup = center - (w * i) + i; // diag sup
+            }
+            if(long(w_center) - i > 0 && long(h_center) + i < long(h)){
+               pos_diag_inf = center + (w * i) - i; // diag inf
+            }
          }
+         img_lines.at(pos_diag_sup) = color;
+         img_lines.at(pos_diag_inf) = color;
       }
    }
 }

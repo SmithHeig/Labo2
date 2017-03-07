@@ -53,8 +53,8 @@ int main(void) {
     img_lines = img_orig;
     
     // cross in the middle
-    draw_diag(img_lines, w, h, w/2, h/2, -1, 255);
-    draw_diag(img_lines, w, h, w/2, h/2, 1, 255);
+    draw_diag(img_lines, w, h, w/3, h/4, -1, 255);
+    draw_diag(img_lines, w, h, w/4, h/4, 1, 255);
     
     // rule of thirds
     draw_hline(img_lines, w, h, (h/3), 1, 0);
@@ -63,10 +63,10 @@ int main(void) {
     draw_vline(img_lines, w, h, (w/3)*2, 1, 0);    
 
     // picture frame
-    draw_hline(img_lines, w, h, 0, 10, 128);
-    draw_vline(img_lines, w, h, w-10, 10, 128);
-    draw_hline(img_lines, w, h, h-10, 10, 128);
-    draw_vline(img_lines, w, h, 0, 10, 128);
+    //draw_hline(img_lines, w, h, 0, 10, 128);
+    //draw_vline(img_lines, w, h, w-10, 10, 128);
+    //draw_hline(img_lines, w, h, h-10, 10, 128);
+    //draw_vline(img_lines, w, h, 0, 10, 128);
     
     /* black/transparent checker */
     img_checker = img_orig;
